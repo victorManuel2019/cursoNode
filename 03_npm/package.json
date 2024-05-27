@@ -1,0 +1,16 @@
+{
+  "name": "primeros-pasos-npm",
+  "version": "1.0.0",
+  "description": "Proyecto para aprender NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Manuel <victoruaem@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.3.1",
+    "responsimple": "^1.0.1",
+    "serve": "^14.2.3"
+  }
+}
