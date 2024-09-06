@@ -17,7 +17,7 @@ const rl = createInterface({
 function displayMenu(){
     console.log(chalk.magenta("____________________________"))
     console.log(chalk.yellow.bold("  TO DO App ('nameApp')   ")),
-    console.log(chalk.blueBright("\n-Opciones:")),
+    console.log(chalk.blueBright("-Opciones:")),
     console.log("1. Agregar tarea"),
     console.log("2. Lista de tareas"),
     console.log("3. Completar tarea"),
@@ -44,11 +44,10 @@ function addTask(){
 //opción 2 
 function listTasks() {
     console.log(chalk.greenBright("\n--------|Lista de tareas|--------"))
-
     if (tasks.length === 0) {
         console.log(chalk.yellow("No hay tareas por hacer :)"));
     } else{
-        tasks.forEach( (task, index) =>{
+        tasks.forEach((task, index) =>{
             //operador ternario para indicar si su estatus está o no completado (true o false)
             let estado = task.completada ? "10" : "X";
             console.log(chalk.bgGray(`${index + 1}. ${estado} - ${task.task}`));
@@ -59,7 +58,7 @@ function listTasks() {
 }
 
 function choiceOption (){
-    rl.question("Digita numero de una opción: ", (choice)=>{
+    rl.question("\nDigita numero de una opción: ", (choice)=>{
         switch (choice) {
             case "1":
                 console.log("Crear tarea")
@@ -78,7 +77,7 @@ function choiceOption (){
                 break;
 
             default:
-                console.log(chalk.red("Opción invalible :(, intentalo de nuevo. \n"))
+                console.log(chalk.red("Opción invalible :( \nintentalo de nuevo. \n"))
                 //Realizamos recursividad al volver a llamar la función del menu y el choiceOption
                 displayMenu();
                 choiceOption();
